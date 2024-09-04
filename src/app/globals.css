@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* styles/globals.css or your custom CSS file */
+.ant-menu-item-selected {
+  background-color: #FF9800 !important;
+}
+
+.ant-menu-item-selected a {
+  color: orange !important;
+}
+
+.ant-menu-item:hover {
+  background-color: #262626 !important;
+}
+
+.ant-menu-item a {
+  color: white !important;
+}
