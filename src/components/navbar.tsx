@@ -6,7 +6,7 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Login", href: "/login" },
+  { name: "Login", href: "/api/login" },
 ];
 
 export default function Navbar() {
