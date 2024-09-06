@@ -1,8 +1,19 @@
 'use client';
 import React from 'react';
 import { Upload, Bell } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 const UploadDocuments = () => {
+
+    const router = useRouter();
+
+    const handlePreviousClick = () => {
+        router.push('./visa');
+    }
+
+    const handleNextClick = () => {
+        router.push('./passport');
+    };
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0];
         if (file) {
@@ -11,7 +22,7 @@ const UploadDocuments = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4" id='upload'>
             <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl w-full">
                 <div className="relative mb-4">
                     <img
