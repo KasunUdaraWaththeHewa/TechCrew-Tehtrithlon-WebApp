@@ -6,6 +6,11 @@ import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import Image from 'next/image';
 
 const Login: React.FC = () => {
+
+  const handleLoginClick = () => {
+    window.location.href = '/api/admin/dashboard';
+  };
+
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-cover bg-center" style={{ backgroundImage: "url('/assets/images/background.png')" }}>
       <div className="flex-grow flex flex-col justify-center items-center">
@@ -35,7 +40,8 @@ const Login: React.FC = () => {
             <a href="#" className="text-sm text-gray-600">Forgot Password?</a>
           </div>
 
-          <Button type="primary" className="w-full bg-yellow-500 border-none hover:bg-yellow-600" size="large">
+          <Button type="primary" className="w-full bg-yellow-500 border-none hover:bg-yellow-600" size="large"
+          onClick={handleLoginClick} >
             Login
           </Button>
         </div>
