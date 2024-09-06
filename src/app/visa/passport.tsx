@@ -1,9 +1,22 @@
+'use client';
 import React from 'react';
 import { Bell } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+
 
 const PassportDetails = () => {
+    const router = useRouter();
+
+    const handlePreviousClick = () => {
+        router.push('./visa');
+    }
+
+    const handleNextClick = () => {
+        router.push('./passport');
+    };
+
     return (
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4" id='passport'>
             <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl w-full">
                 <div className="relative mb-4">
                     <img
@@ -116,7 +129,11 @@ const PassportDetails = () => {
                         <button className="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg shadow-md hover:bg-gray-400 transition duration-300">
                             Previous
                         </button>
-                        <button className="bg-yellow-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition duration-300">
+                        <button
+                            type="button"
+                            onClick={handleNextClick}
+                            className="bg-yellow-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition duration-300"
+                        >
                             Next
                         </button>
                     </div>

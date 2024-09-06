@@ -44,6 +44,13 @@ interface AdminSidebarProps {
           Account
         </Menu.Item>
         <Menu.Item
+          key="account"
+          icon={<UserOutlined />}
+          onClick={() => window.location.href = '/visa'}
+        >
+          Application
+        </Menu.Item>
+        <Menu.Item
           key="settings"
           icon={<SettingOutlined />}
           onClick={() => window.location.href = '/settings'}

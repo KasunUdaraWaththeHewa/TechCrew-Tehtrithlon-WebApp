@@ -1,8 +1,19 @@
+'use client';
 import { Calendar, MapPin, Home, Phone, Bell } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 const AdditionalDetails = () => {
+    const router = useRouter();
+
+    const handlePreviousClick = () => {
+        router.push('./visadoc');
+    }
+
+    const handleNextClick = () => {
+        router.push('./passport');
+    };
     return (
-        <div className="min-h-screen bg-gray-50 flex justify-center items-center">
+        <div className="min-h-screen bg-gray-50 flex justify-center items-center" id='additional'>
             <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
                 <div className="relative mb-4">
                     <img
@@ -94,10 +105,17 @@ const AdditionalDetails = () => {
                         </div>
 
                         <div className="flex justify-between mt-8">
-                            <button className="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg shadow-md hover:bg-gray-400 transition duration-300">
+                            <button className="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg shadow-md hover:bg-gray-400 transition duration-300"
+
+                                type="button"
+                                onClick={handlePreviousClick}>
                                 Previous
                             </button>
-                            <button className="bg-yellow-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition duration-300">
+                            <button
+                                type="button"
+                                onClick={handleNextClick}
+                                className="bg-yellow-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition duration-300"
+                            >
                                 Next
                             </button>
                         </div>
